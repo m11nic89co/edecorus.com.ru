@@ -10,7 +10,7 @@ body {
 
 /* Шапка */
 header {
-	background: #C9A227; /* Золотистый */
+	background: #8D6E63; /* Теплый серо-коричневый */
 	color: white;
 	padding: 15px 0;
 	display: flex;
@@ -34,7 +34,7 @@ nav a {
 }
 
 nav a:hover {
-	color: #1B4332; /* Темно-зеленый при наведении */
+	color: #3A5335; /* Глубокий травяной */
 }
 
 /* Главный блок */
@@ -50,7 +50,7 @@ nav a:hover {
 .button {
 	display: inline-block;
 	padding: 12px 20px;
-	background: #1B4332; /* Темно-зеленый */
+	background: #3A5335; /* Глубокий травяной */
 	color: white;
 	text-decoration: none;
 	border-radius: 5px;
@@ -59,7 +59,7 @@ nav a:hover {
 }
 
 .button:hover {
-	background: #0F3323; /* Чуть темнее при наведении */
+	background: #2B3E27; /* Чуть темнее при наведении */
 }
 
 /* Контент */
@@ -80,7 +80,7 @@ nav a:hover {
 
 /* Подвал */
 footer {
-	background: #C9A227; /* Золотистый */
+	background: #8D6E63; /* Теплый серо-коричневый */
 	color: white;
 	padding: 10px;
 	margin-top: 20px;
