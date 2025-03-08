@@ -4,13 +4,13 @@ body {
 	margin: 0;
 	padding: 0;
 	text-align: center;
-	background-color: #F5F1E9; /* Натуральный бежевый фон */
-	color: #2F4F2F; /* Темно-зеленый текст */
+	background-color: #F7F3E9; /* Кремовый фон */
+	color: #2E2E2E; /* Графитовый текст */
 }
 
 /* Шапка */
 header {
-	background: #8B5A2B; /* Натуральный коричневый */
+	background: #C9A227; /* Золотистый */
 	color: white;
 	padding: 15px 0;
 	display: flex;
@@ -34,13 +34,13 @@ nav a {
 }
 
 nav a:hover {
-	color: #A9A57D; /* Оливковый при наведении */
+	color: #1B4332; /* Темно-зеленый при наведении */
 }
 
 /* Главный блок */
 .hero {
 	padding: 50px;
-	background: #FAF3E0; /* Светлый теплый бежевый */
+	background: #EEE8D9; /* Светло-бежевый */
 	border-radius: 10px;
 	margin: 20px auto;
 	max-width: 80%;
@@ -50,7 +50,7 @@ nav a:hover {
 .button {
 	display: inline-block;
 	padding: 12px 20px;
-	background: #A9A57D; /* Оливковый */
+	background: #1B4332; /* Темно-зеленый */
 	color: white;
 	text-decoration: none;
 	border-radius: 5px;
@@ -59,7 +59,7 @@ nav a:hover {
 }
 
 .button:hover {
-	background: #6D8B74; /* Темнее при наведении */
+	background: #0F3323; /* Чуть темнее при наведении */
 }
 
 /* Контент */
@@ -80,7 +80,7 @@ nav a:hover {
 
 /* Подвал */
 footer {
-	background: #8B5A2B;
+	background: #C9A227; /* Золотистый */
 	color: white;
 	padding: 10px;
 	margin-top: 20px;
