@@ -1,7 +1,7 @@
 import React from 'react';
 import Footer from '../components/Footer';
 
-const HomePage = () => {
+const WholesalePage = () => {
     return (
         <div>
             // ...existing code...
@@ -10,4 +10,4 @@ const HomePage = () => {
     );
 };
 
-export default HomePage;
+export default WholesalePage;
