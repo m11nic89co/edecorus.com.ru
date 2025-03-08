@@ -1,68 +1,87 @@
+/* Общие стили */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0; /* Light grey background */
-    color: #333; /* Dark grey text */
-    margin: 0;
-    padding: 0;
-    text-align: center;
+	font-family: 'Arial', sans-serif;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	background-color: #FAF9F6; /* Мягкий бежевый фон */
+	color: #333; /* Темно-серый текст */
 }
 
+/* Шапка */
 header {
-    background-color: #004080; /* Dark blue background */
-    color: #fff; /* White text */
-    padding: 20px;
-    text-align: center;
+	background: #2C3E50; /* Темно-синий, солидный */
+	color: white;
+	padding: 15px 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 5%;
 }
 
+.logo {
+	font-size: 24px;
+	font-weight: bold;
+}
+
+/* Навигация */
 nav a {
-    color: #fff; /* White text for links */
-    margin: 0 15px;
-    text-decoration: none;
+	color: white;
+	margin: 0 15px;
+	text-decoration: none;
+	font-weight: bold;
+	transition: 0.3s;
 }
 
 nav a:hover {
-    text-decoration: underline;
+	color: #4CAF50; /* Мягкий зеленый при наведении */
 }
 
+/* Главный блок */
 .hero {
-    background-color: #e0e0e0; /* Light grey background */
-    color: #004080; /* Dark blue text */
-    padding: 50px;
-    text-align: center;
+	padding: 50px;
+	background: #F5F5F5; /* Светло-серый */
+	border-radius: 10px;
+	margin: 20px auto;
+	max-width: 80%;
 }
 
-.hero .button {
-    background-color: #004080; /* Dark blue button */
-    color: #fff; /* White text */
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
+/* Кнопки */
+.button {
+	display: inline-block;
+	padding: 12px 20px;
+	background: #4CAF50; /* Мягкий зеленый */
+	color: white;
+	text-decoration: none;
+	border-radius: 5px;
+	font-size: 18px;
+	transition: 0.3s;
 }
 
-.hero .button:hover {
-    background-color: #003366; /* Darker blue on hover */
+.button:hover {
+	background: #388E3C; /* Темнее при наведении */
 }
 
-.catalog {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
+/* Контент */
+.catalog, .wholesale, .contacts {
+	padding: 20px;
 }
 
+/* Элементы каталога */
 .item {
-    background: #f4f4f4;
-    padding: 15px;
-    width: 30%;
+	background: #fff;
+	padding: 15px;
+	margin: 10px auto;
+	width: 80%;
+	max-width: 400px;
+	border-radius: 8px;
+	box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* Подвал */
 footer {
-    background-color: #004080; /* Dark blue background */
-    color: #fff; /* White text */
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    margin-top: 20px;
+	background: #2C3E50;
+	color: white;
+	padding: 10px;
+	margin-top: 20px;
 }
