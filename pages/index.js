@@ -4,7 +4,7 @@ import Footer from '../components/Footer';
 const HomePage = () => {
     return (
         <div>
-            // ...existing code...
+            {/* ...existing code... */}
             <Footer />
         </div>
     );

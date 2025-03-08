@@ -4,7 +4,7 @@ import Footer from '../components/Footer';
 const CatalogPage = () => {
     return (
         <div>
-            // ...existing code...
+            {/* ...existing code... */}
             <Footer />
         </div>
     );

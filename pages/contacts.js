@@ -1,14 +1,13 @@
+import React from 'react';
+import Footer from '../components/Footer';
 
+const ContactsPage = () => {
+    return (
+        <div>
+            {/* ...existing code... */}
+            <Footer />
+        </div>
+    );
+};
 
-
-
-
-
-
-
-
-
-
-
-
-export default ContactsPage;};    );        </div>            <Footer />            // ...existing code...        <div>    return (const ContactsPage = () => {import Footer from '../components/Footer';import React from 'react';
+export default ContactsPage;
