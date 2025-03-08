@@ -1,0 +1,51 @@
+body {
+	font-family: Arial, sans-serif;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+header {
+	background: #333;
+	color: white;
+	padding: 10px 0;
+}
+
+nav a {
+	color: white;
+	margin: 0 15px;
+	text-decoration: none;
+}
+
+.hero {
+	padding: 50px;
+}
+
+.button {
+	display: inline-block;
+	padding: 10px 20px;
+	background: #28a745;
+	color: white;
+	text-decoration: none;
+	border-radius: 5px;
+}
+
+.catalog {
+	display: flex;
+	justify-content: center;
+	gap: 20px;
+	padding: 20px;
+}
+
+.item {
+	background: #f4f4f4;
+	padding: 15px;
+	width: 30%;
+}
+
+footer {
+	background: #333;
+	color: white;
+	padding: 10px;
+	margin-top: 20px;
+}
