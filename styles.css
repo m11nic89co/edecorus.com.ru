@@ -1,51 +1,68 @@
 body {
-	font-family: Arial, sans-serif;
-	margin: 0;
-	padding: 0;
-	text-align: center;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Light grey background */
+    color: #333; /* Dark grey text */
+    margin: 0;
+    padding: 0;
+    text-align: center;
 }
 
 header {
-	background: #333;
-	color: white;
-	padding: 10px 0;
+    background-color: #004080; /* Dark blue background */
+    color: #fff; /* White text */
+    padding: 20px;
+    text-align: center;
 }
 
 nav a {
-	color: white;
-	margin: 0 15px;
-	text-decoration: none;
+    color: #fff; /* White text for links */
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
 }
 
 .hero {
-	padding: 50px;
+    background-color: #e0e0e0; /* Light grey background */
+    color: #004080; /* Dark blue text */
+    padding: 50px;
+    text-align: center;
 }
 
-.button {
-	display: inline-block;
-	padding: 10px 20px;
-	background: #28a745;
-	color: white;
-	text-decoration: none;
-	border-radius: 5px;
+.hero .button {
+    background-color: #004080; /* Dark blue button */
+    color: #fff; /* White text */
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.hero .button:hover {
+    background-color: #003366; /* Darker blue on hover */
 }
 
 .catalog {
-	display: flex;
-	justify-content: center;
-	gap: 20px;
-	padding: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
 }
 
 .item {
-	background: #f4f4f4;
-	padding: 15px;
-	width: 30%;
+    background: #f4f4f4;
+    padding: 15px;
+    width: 30%;
 }
 
 footer {
-	background: #333;
-	color: white;
-	padding: 10px;
-	margin-top: 20px;
+    background-color: #004080; /* Dark blue background */
+    color: #fff; /* White text */
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin-top: 20px;
 }
