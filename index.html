@@ -45,6 +45,7 @@
 			z-index: 1000;
 			transition: opacity 0.3s ease;
 			opacity: 1;
+			padding: 1rem 1.5rem;
 		}
 
 		.navbar-brand,
@@ -56,9 +57,18 @@
 			color: var(--accent-color) !important;
 		}
 
-		/* Добавляем плавный переход для логотипа */
+		/* Логотип с ограничением размера */
 		.navbar-brand img {
+			height: 40px;
+			max-height: 40px;
 			transition: opacity 0.3s ease;
+		}
+
+		@media (max-width: 768px) {
+			.navbar-brand img {
+				height: 30px;
+				max-height: 30px;
+			}
 		}
 
 		/* Баннер (Hero Section) с фоновым изображением */
@@ -119,11 +129,10 @@
 			scroll-snap-align: center;
 			scroll-snap-stop: always;
 			padding: 2rem 0;
-			/* внутренние отступы для удобства */
 		}
 
-		/* Задаем фон для каждой секции (кроме главной) согласно требуемой очередности */
-		/* Главная (Hero) секция имеет фоновое изображение, остальные чередуются: */
+		/* Фоны для секций согласно очередности */
+		/* Главная (Hero) секция имеет фоновое изображение */
 		#about {
 			background-color: var(--background-main);
 		}
@@ -165,6 +174,24 @@
 		footer {
 			background-color: var(--primary-color);
 			color: var(--text-on-dark);
+			padding: 1rem 0;
+			text-align: center;
+		}
+
+		/* Media query для уменьшения меню и футера на мобильных устройствах */
+		@media (max-width: 768px) {
+			.navbar {
+				padding: 0.5rem 1rem;
+			}
+
+			.navbar-nav .nav-link {
+				font-size: 0.9rem;
+			}
+
+			footer {
+				padding: 0.5rem 0;
+				font-size: 0.9rem;
+			}
 		}
 	</style>
 </head>
@@ -174,7 +201,7 @@
 	<nav class="navbar navbar-expand-lg navbar-dark">
 		<div class="container">
 			<a class="navbar-brand" href="#">
-				<img src="logo.svg" alt="Логотип" style="height: 40px;">
+				<img src="logo.svg" alt="Логотип">
 			</a>
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
 				aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -273,7 +300,7 @@
 	<!-- Контакты (Contact Section) -->
 	<section id="contact" class="py-5">
 		<div class="container">
-			<h2 class="mb-4">Контакты</h2>
+			<h2 class="mb-4">Прайс/Контакты</h2>
 			<div class="row">
 				<!-- Форма запроса прайс-листа -->
 				<div class="col-md-6">
@@ -332,33 +359,45 @@
 	<script>
 		window.addEventListener('scroll', function () {
 			const logo = document.querySelector('.navbar-brand img');
-			// Применяем эффект только в мобильной версии (например, при ширине экрана <= 768px)
+			// Применяем эффект только в мобильной версии (при ширине экрана <= 768px)
 			if (window.innerWidth <= 768) {
 				let scrollPos = window.scrollY;
-				// При 100px скролла логотип исчезает полностью
 				let maxScroll = 100;
 				let opacity = 1 - Math.min(scrollPos / maxScroll, 1);
 				logo.style.opacity = opacity;
 			} else {
-				logo.style.opacity = 1;
+				logo.style.opacity = '1';
 			}
 		});
 	</script>
 	<script>
-		// Получаем элемент коллапса навигационного меню
+		// Автоматическое сворачивание мобильного меню при клике на ссылку
 		const navbarCollapse = document.getElementById('navbarNav');
-		// Выбираем все ссылки внутри меню
 		const navLinks = navbarCollapse.querySelectorAll('.nav-link');
-
-		// Для каждой ссылки добавляем обработчик клика
 		navLinks.forEach(link => {
 			link.addEventListener('click', () => {
-				// Создаем экземпляр Collapse и вызываем метод hide, если меню открыто
 				const bsCollapse = new bootstrap.Collapse(navbarCollapse, { toggle: false });
 				bsCollapse.hide();
 			});
 		});
 	</script>
+	<!-- Media query для уменьшения меню и футера на мобильных устройствах -->
+	<style>
+		@media (max-width: 768px) {
+			.navbar {
+				padding: 0.5rem 1rem;
+			}
+
+			.navbar-nav .nav-link {
+				font-size: 0.9rem;
+			}
+
+			footer {
+				padding: 0.5rem 0;
+				font-size: 0.9rem;
+			}
+		}
+	</style>
 </body>
 
 </html>
