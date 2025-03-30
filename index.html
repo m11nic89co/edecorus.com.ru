@@ -370,17 +370,33 @@
 			}
 		});
 	</script>
-	<script>
-		// Автоматическое сворачивание мобильного меню при клике на ссылку
-		const navbarCollapse = document.getElementById('navbarNav');
-		const navLinks = navbarCollapse.querySelectorAll('.nav-link');
-		navLinks.forEach(link => {
-			link.addEventListener('click', () => {
-				const bsCollapse = new bootstrap.Collapse(navbarCollapse, { toggle: false });
-				bsCollapse.hide();
-			});
-		});
-	</script>
+<script>
+  // Закрытие меню при клике на ссылку
+  const navbarCollapse = document.getElementById('navbarNav');
+  const navLinks = navbarCollapse.querySelectorAll('.nav-link');
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      const bsCollapse = new bootstrap.Collapse(navbarCollapse, { toggle: false });
+      bsCollapse.hide();
+    });
+  });
+
+  // Закрытие меню при скролле (мобильная версия)
+  let scrollTimer;
+  window.addEventListener('scroll', function() {
+    if (window.innerWidth <= 768) {
+      const navbarCollapse = document.getElementById('navbarNav');
+      if (navbarCollapse.classList.contains('show')) {
+        clearTimeout(scrollTimer);
+        scrollTimer = setTimeout(function() {
+          const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
+            toggle: false
+          });
+          bsCollapse.hide();
+        }, 300);
+      }
+    }
+  });
 	<!-- Media query для уменьшения меню и футера на мобильных устройствах -->
 	<style>
 		@media (max-width: 768px) {
